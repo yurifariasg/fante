@@ -25,7 +25,7 @@ const sendEmail = async (content) => {
     html: content,
   };
   if (IS_PROD) {
-    const info = await transporter.sendMail();
+    const info = await transporter.sendMail(mailContent);
     console.log("Email sent: %s", info.messageId);
   } else {
     console.log("Sending:");
