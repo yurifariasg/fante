@@ -1,0 +1,17 @@
+{
+  "name": "fante-notifier",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "build": "docker build -t fonte-notifier ."
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "handlebars": "^4.7.6",
+    "ioredis": "^4.17.3",
+    "nodemailer": "^6.4.10"
+  }
+}
