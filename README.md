@@ -13,6 +13,10 @@ The idea behind this applications is that it will help you remember good things 
 Early version sample email
 ![alt text](images/fante-sample.png "Fante Sample E-mail")
 
+## Sequence Diagram
+
+![alt text](images/sequence-diagram.png "Sequence Flow")
+
 ## How to run ?
 
 Pre-built base images are stored on [DockerHub](https://hub.docker.com/r/yurifariasg/fante) and can be used as a starting point. You still need to supply a configuration file for it to work.
