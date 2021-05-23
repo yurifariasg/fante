@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "handlebars": "^4.7.6",
+    "handlebars": "^4.7.7",
     "ioredis": "^4.17.3",
     "nodemailer": "^6.4.10"
   }
