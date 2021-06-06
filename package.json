@@ -14,7 +14,9 @@
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.76",
+    "@types/nodemailer": "^6.4.2",
     "aws-sdk": "2.880.0",
+    "copy-webpack-plugin": "^9.0.0",
     "serverless-offline": "^7.0.0",
     "serverless-webpack": "^5.5.0",
     "ts-loader": "^9.2.2",

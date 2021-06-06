@@ -1,5 +1,6 @@
 const { join } = require('path')
 const slsw = require('serverless-webpack')
+const CopyPlugin = require('copy-webpack-plugin')
 
 module.exports = {
   entry: slsw.lib.entries,
@@ -32,4 +33,14 @@ module.exports = {
   optimization: {
     minimize: false,
   },
+  plugins: [
+    new CopyPlugin({
+      patterns: [
+        {
+          from: './src/email-templates/**/*.html',
+          to: './src/email-templates',
+        },
+      ],
+    }),
+  ],
 }

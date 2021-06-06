@@ -32,3 +32,19 @@ export const storeHighlights = async (highlights: Highlight[]) => {
     await dbClient.batchWrite(params).promise()
   }
 }
+
+export const getStoredHighlights = async (): Promise<Highlight[]> => {
+  const highlights = []
+  let result = await dbClient.scan({ TableName: tableName }).promise()
+  highlights.push(...(result.Items ?? []))
+  while (result.LastEvaluatedKey) {
+    result = await dbClient
+      .scan({
+        TableName: tableName,
+        ExclusiveStartKey: result.LastEvaluatedKey,
+      })
+      .promise()
+    highlights.push(...(result.Items ?? []))
+  }
+  return highlights as Highlight[]
+}
