@@ -60,6 +60,7 @@ export const fetchHighlights = async (): Promise<Highlight[]> => {
   return annotations.map((annotation) => ({
     id: annotation.annotation_id,
     text: annotation.quote,
+    title: annotation.article.resolved_title,
     author:
       annotation.article.domain_metadata?.name ??
       annotation.article.resolved_url ??
