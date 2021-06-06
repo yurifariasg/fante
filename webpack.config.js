@@ -38,7 +38,7 @@ module.exports = {
       patterns: [
         {
           from: './src/email-templates/**/*.html',
-          to: './src/email-templates',
+          to: './',
         },
       ],
     }),
