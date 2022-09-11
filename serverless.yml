@@ -1,6 +1,6 @@
 service: fante-notifier
 
-frameworkVersion: '2'
+frameworkVersion: '3'
 
 plugins:
   - serverless-offline
